@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+
+  haproxy:
+    ports:
+      - 80:80
+    build:
+      context: ./
+      dockerfile: haproxy/Dockerfile
+    volumes:
+      - ./haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg
+      - ./haproxy/hosts.map:/etc/haproxy/hosts.map
+      - ./haproxy/backends.map:/etc/haproxy/backends.map
+      - ./haproxy/blocked.map:/etc/haproxy/blocked.map
+      - ./haproxy/whitelist.map:/etc/haproxy/whitelist.map
+
+  nginx:
+    ports:
+      - 81:80
+    image: "nginx:latest"
+    volumes:
+      - ./nginx:/usr/share/nginx/html
+
