@@ -3,6 +3,16 @@
 This repo has HA Proxy configuration with `docker-compose`.
 
 
+## Features
+
+| Scenarios                   | Status  |
+|-----------------------------|---------|
+| Blacklist                   | ✅      |
+| Rate Limit Global           | ✅      |
+| Rate Limit on URLs          | ✅      |
+| Rate Limit on Specific URLs | ✅      |
+
+
 ## HA Proxy Setup
 
 1. Clone the repo
@@ -96,4 +106,5 @@ curl <NGROK URL>
 ```
 
 It should return `403 Forbidden` now.
+
 

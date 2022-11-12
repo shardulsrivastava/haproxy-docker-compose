@@ -13,11 +13,19 @@ services:
       - ./haproxy/blocked.map:/etc/haproxy/blocked.map
       - ./haproxy/whitelist.map:/etc/haproxy/whitelist.map
 
-  nginx:
-    container_name: nginx
+  nginx-v1:
+    container_name: nginx-v1
     ports:
-      - 81:80
-    image: "nginx:latest"
+      - 81:81
+    image: "quay.io/shardul/nginx:v1"
     volumes:
-      - ./nginx:/usr/share/nginx/html
+      - ./nginx/default-v1.conf:/etc/nginx/conf.d/default.conf
+
+  nginx-v2:
+    container_name: nginx-v2
+    ports:
+      - 82:82
+    image: "quay.io/shardul/nginx:v2"
+    volumes:
+      - ./nginx/default-v2.conf:/etc/nginx/conf.d/default.conf
 
