@@ -5,12 +5,14 @@ This repo has HA Proxy configuration with `docker-compose`.
 
 ## Features
 
-| Scenarios                   | Status  |
-|-----------------------------|---------|
-| Blacklist                   | ✅      |
-| Rate Limit Global           | ✅      |
-| Rate Limit on URLs          | ✅      |
-| Rate Limit on Specific URLs | ✅      |
+| Scenarios                                           | Status  |
+|-----------------------------------------------------|---------|
+| Blacklist based on IP                               | ✅      |
+| Rate Limit based on User Agent                      | ✅      |
+| Rate Limit Global                                   | ✅      |
+| Rate Limit on URLs                                  | ✅      |
+| Rate Limit on Specific URLs                         | ✅      |
+| Rate Limit on Specific URLs with delay of 5 seconds | ✅      |
 
 
 ## HA Proxy Setup

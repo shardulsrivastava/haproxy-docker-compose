@@ -9,7 +9,8 @@ services:
     volumes:
       - ./haproxy/haproxy.cfg:/etc/haproxy/haproxy.cfg
       - ./haproxy/hosts.map:/etc/haproxy/hosts.map
-      - ./haproxy/blacklist.acl:/etc/haproxy/blacklist.acl
+      - ./haproxy/ip_blacklist.acl:/etc/haproxy/ip_blacklist.acl
+      - ./haproxy/ua_blacklist.acl:/etc/haproxy/ua_blacklist.acl
       - ./haproxy/blocked.map:/etc/haproxy/blocked.map
       - ./haproxy/whitelist.map:/etc/haproxy/whitelist.map
 
